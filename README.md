@@ -1,2 +1,5 @@
 # Algorithms
-Here I will post my algorithms labs ^^
+## Сборник всех лаб по алгосам от @itmoru
+1. Вводная лаба, ничего интересного
+2. MergeSort, QSort
+3. 
