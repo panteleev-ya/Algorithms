@@ -1,47 +1,49 @@
-#include <iostream>
-#include <vector>
-#include <fstream>
-#include <queue>
+#include<iostream>
+#include<fstream>
+
 using namespace std;
 
-void bfs(int, int, vector<vector<int>>&, vector<int>&, vector<int>&, queue<int>&);
-
+long long int n, a;
+float t;
+float m[10000];
+float m2[10000];
 int main() {
-    ifstream IN("pathbge1.in");
-    ofstream OUT("pathbge1.out");
-    int n, m, a, b;
-    IN >> n >> m;
-	vector < vector <int> > g(n);
-    for(size_t i = 0; i < m; i++) {
-        IN >> a >> b;
-        g[a - 1].push_back(b - 1);
-        g[b - 1].push_back(a - 1);
+    ifstream file1;
+    file1.open("sortland.in");
+    ofstream file2;
+    file2.open("sortland.out");
+    file1 >> n;
+    for (int i=0; i<n; i++) {
+        file1 >> m[i];
+        m2[i] = m[i];
     }
-    vector <int> ways(n, 0);
-	queue <int> top;
-	vector <bool> used(n, 0);
-	used[0] = 1;
-    bfs(0, 0, g, used, ways, top);
-    int current;
-    while(top.size() > 0){
-        current = top.front();
-        top.pop();
-        bfs(ways[current], current, g, used, ways, top);
+    for (int i=0; i<n; i++) {
+        a = i;
+        for (int j=i+1; j<n; j++) {
+            if (m[j] <= m[a]) {
+                a = j;
+            }
+        }
+        t = m[i];
+        m[i] = m[a];
+        m[a] = t;
     }
-    for(size_t i = 0; i < n; i++){
-        OUT << ways[i] << ' ';
+    float j1, j2, j3;
+    j1 = m[0];
+    j2 = m[(n+1)/2-1];
+    j3 = m[n-1];
+    int i1, i2, i3;
+    for (int i=0; i<n; i++) {
+        if (m2[i] == j1) {
+            i1 = i;
+        }
+        else if (m2[i] == j2) {
+            i2 = i;
+        }
+        else if (m2[i] == j3) {
+            i3 = i;
+        }
     }
-    OUT.close();
-    IN.close();
+    file2 << i1+1 << ' ' << i2+1 << ' ' << i3+1;
     return 0;
-}
-
-void bfs(int waylen, int here, vector<vector<int>>& g, vector<bool>& used, vector<int>& ways, queue<int>& top) {
-	for (size_t i = 0; i < g[here].size(); i++) {
-		if (used[g[here][i]] == 0) {
-			used[g[here][i]] = 1;
-			ways[g[here][i]] = waylen + 1;
-			top.push(g[here][i]);
-		}
-	}
 }

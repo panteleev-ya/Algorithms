@@ -1,32 +1,15 @@
-#include <iostream>
-#include <fstream>
-using namespace std;
-//#define OUT cout
-//#define IN cin
+#include<iostream>
+#include<fstream>
 
+using namespace std;
+
+long long int a, b;
 int main() {
-	ifstream IN("input.txt");
-	ofstream OUT("output.txt");
-	int n;
-	bool table[100][100];
-	IN >> n;
-	for (size_t i = 0; i < n; i++) {
-		for (size_t j = 0; j < n; j++) {
-			IN >> table[i][j];
-		}
-	}
-	for (size_t i = 0; i < n; i++) {
-		for (size_t j = 0; j < n; j++) {
-			if (table[i][j] ^ table[j][i]) {
-				OUT << "NO" << endl;
-				return 0;
-			}
-			if (i == j && table[i][j]) {
-				OUT << "NO" << endl;
-				return 0;
-			}
-		}
-	}
-	OUT << "YES" << endl;
-	return 0;
+    ifstream file1;
+    file1.open("aplusbb.in");
+    ofstream file2;
+    file2.open("aplusbb.out"); 
+    file1 >> a >> b;
+    file2 << (a+(b*b)) << endl;
+    return 0;
 }
