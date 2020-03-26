@@ -4,3 +4,9 @@
 2. MergeSort, QSort
 3. Stack, Queue, PriorityQueue
 4.
+5.
+6.
+7. Не делал я ваши AVL-деревья, когда-нибудь сделаю
+8.
+9.
+10.
