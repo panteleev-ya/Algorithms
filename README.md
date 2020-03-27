@@ -1,12 +1,12 @@
 # Algorithms
 ## Сборник всех лаб по алгосам от @itmoru
 1. Вводная лаба, ничего интересного
-2. MergeSort, QSort
-3. Бинарный поиск, HeapSort, цифровая сортировка
-4. Stack, Queue, PriorityQueue
+2. `MergeSort`, `QSort`
+3. Бинарный поиск, `HeapSort`, цифровая сортировка
+4. `Stack`, `Queue`, `PriorityQueue`
 5. Set, Map, LinkedMap, MultiMap, хэш-таблицы
-6.
+6. Двоичные деревья поиска
 7. Не делал я ваши AVL-деревья, когда-нибудь сделаю
-8.
+8. Вводная лаба по графам. BFS, DFS
 9.
 10.
