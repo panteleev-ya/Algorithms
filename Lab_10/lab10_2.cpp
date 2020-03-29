@@ -5,13 +5,13 @@
 constexpr int INF = 31415926535;
 using std::cin;
 using std::cout;
-// using std::vector;
+using std::vector;
 
 void prim(std::vector <std::vector <int>>&, std::vector <int>&, std::vector <bool>&, int, int);
 
 int main() {
-	// freopen("spantree.in", "r", stdin);
-	// freopen("spantree.out", "w", stdout);
+	freopen("spantree.in", "r", stdin);
+	freopen("spantree.out", "w", stdout);
 	int n;
 	double result = 0;
 	cin >> n;
