@@ -5,7 +5,6 @@
 constexpr int INF = 31415926535;
 using std::cin;
 using std::cout;
-using std::vector;
 
 void prim(std::vector <std::vector <int>>&, std::vector <int>&, std::vector <bool>&, int, int);
 
