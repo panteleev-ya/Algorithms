@@ -11,10 +11,10 @@ bool united(std::pair<ll, ll> e);
 void unite(std::pair<ll, ll> e);
 
 int main() {
-	freopen("spantree3.in", "r", stdin);
-	freopen("spantree3.out", "w", stdout);
+    freopen("spantree3.in", "r", stdin);
+    freopen("spantree3.out", "w", stdout);
 
-	std::ios_base::sync_with_stdio(false);
+    std::ios_base::sync_with_stdio(false);
     ll n, m, a, b, l;
     cin >> n >> m;
     p.resize(n + 1);
